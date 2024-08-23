@@ -18,6 +18,10 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        inter: ['var(--font-inter)'],
+        lexend: ['var(--font-lexend-deca)'],
+      },
       keyframes: {
         'accordion-down': {
           from: { height: '0' },
@@ -35,10 +39,6 @@ const config = {
     },
   },
   plugins: [require('tailwindcss-animate')],
-  fontFamily: {
-    inter: ['var(--font-inter)'],
-    lexend: ['var(--font-lexend-deca)'],
-  },
 } satisfies Config
 
 export default config
