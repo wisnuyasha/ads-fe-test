@@ -1,5 +1,5 @@
 import { User } from '@/types/User'
-import create from 'zustand'
+import { create } from 'zustand'
 
 interface UserState {
   users: User[]

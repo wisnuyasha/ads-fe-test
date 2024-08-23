@@ -17,5 +17,5 @@ export const useLoginAuth = () => {
       })
       router.push('/dashboard')
     }
-  }, [session])
+  }, [session, toast, router])
 }

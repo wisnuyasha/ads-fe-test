@@ -16,7 +16,7 @@ export default function DashboardPage() {
       })
       router.push('/login')
     }
-  }, [session])
+  }, [session, router])
 
   console.log(session)
   return (
