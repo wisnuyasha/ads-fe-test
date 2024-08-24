@@ -4,6 +4,7 @@ import TextImageSection from './_containers/landing/TextImageSection'
 import OpportunitySection from './_containers/landing/OpportunitySection'
 import PricingSection from './_containers/landing/PricingSection'
 import { sections } from '@/constant/sections'
+import FaqSection from './_containers/landing/FaqSection'
 
 export default function LandingPage() {
   return (
@@ -22,6 +23,7 @@ export default function LandingPage() {
       ))}
       <OpportunitySection />
       <PricingSection />
+      <FaqSection />
     </main>
   )
 }
