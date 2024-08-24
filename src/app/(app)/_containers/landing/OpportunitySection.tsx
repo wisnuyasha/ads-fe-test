@@ -10,7 +10,8 @@ export default function OpportunitySection() {
       className="flex h-full min-h-screen w-full flex-col items-center justify-center gap-y-6 px-7 py-20 md:gap-y-10 md:px-0 md:py-0 lg:pl-6"
     >
       <h1 className="font-lexend max-w-2xl text-center text-3xl font-bold text-[#3366FF]">
-        "One Step Closer to More Effective and Connected Communication!"
+        &quot;One Step Closer to More Effective and Connected
+        Communication!&quot;
       </h1>
       <div className="flex flex-col items-center md:flex-row md:gap-x-10">
         <Image
