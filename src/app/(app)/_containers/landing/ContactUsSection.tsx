@@ -2,7 +2,6 @@ import clsxm from '@/lib/clsxm'
 import Image from 'next/image'
 import React from 'react'
 import Logo from '~/logo_white_with_text.svg'
-import Footer from '../layout/Footer'
 
 export default function ContactUsSection() {
   return (
@@ -64,7 +63,7 @@ export default function ContactUsSection() {
           </div>
         </div>
         <div className="flex flex-col gap-y-5">
-          <h3 className="font-inter min-w-20 font-bold">Let's Talk</h3>
+          <h3 className="font-inter min-w-20 font-bold">Let&apos;s Talk</h3>
           <div className="font-inter text-xs">
             <p>
               <a
