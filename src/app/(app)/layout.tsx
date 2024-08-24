@@ -8,7 +8,7 @@ export default function LandingLayout({
   children: React.ReactNode
 }>) {
   return (
-    <main className="flex h-full min-h-screen w-full max-w flex-col items-center justify-center overflow-hidden">
+    <main className="max-w flex h-full min-h-screen w-full flex-col items-center justify-center overflow-hidden">
       <Navbar />
       <Sidebar />
       {children}

@@ -11,7 +11,7 @@ export default function FaqSection() {
   return (
     <main
       id="faq"
-      className="flex h-full min-h-screen w-full flex-col items-center justify-center gap-y-5 bg-[#3366FF]"
+      className="flex h-full min-h-screen w-full flex-col items-center justify-center gap-y-5 bg-[#3366FF] md:min-h-[80vh]"
     >
       <h1 className="font-lexend mb-10 max-w-xs text-center text-2xl font-bold text-white md:max-w-full">
         Frequently Asked Question

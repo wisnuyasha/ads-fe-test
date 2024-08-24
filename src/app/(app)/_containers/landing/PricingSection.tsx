@@ -127,7 +127,7 @@ export default function PricingSection() {
               )}
             >
               <span className="font-inter text-sm font-medium text-white">
-                Get Started
+                {plan.title === 'Starter' ? 'Start Now' : 'Get Started'}
               </span>
             </button>
             <div className="mt-3.5 flex flex-col gap-y-2.5">

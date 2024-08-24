@@ -21,7 +21,7 @@ export default function TextImageSection({
     <main
       id={id}
       className={clsxm(
-        'flex h-full min-h-screen w-full flex-col items-center justify-center md:gap-x-10 lg:pl-6 xl:gap-x-20',
+        'flex h-full min-h-[80vh] w-full flex-col items-center justify-center md:gap-x-10 lg:pl-6 xl:gap-x-20',
         isBgWhite ? 'bg-white' : 'bg-[#ECF2FA]',
         isImageRight ? 'md:flex-row-reverse' : 'md:flex-row'
       )}
