@@ -70,7 +70,7 @@ export default function Navbar() {
           </Link>
         </div>
       </nav>
-      <nav className="fixed top-9 z-50 hidden w-fit flex-row items-center gap-x-14 rounded-lg bg-white/[.92] px-4 py-2.5 drop-shadow-[0_21px_50px_rgba(0,0,0,0.04)] md:flex">
+      <nav className="fixed top-9 z-50 hidden w-fit flex-row items-center gap-x-14 rounded-lg bg-white/[.92] px-4 py-2.5 drop-shadow-[0_21px_50px_rgba(0,0,0,0.04)] backdrop-blur-sm md:flex">
         <Link href={'/'}>
           <Image src={Logo} alt="Logo" className="ml-2 h-fit w-[137px]" />
         </Link>
