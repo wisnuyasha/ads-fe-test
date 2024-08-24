@@ -1,6 +1,7 @@
 import React from 'react'
 import { Pie, PieChart } from 'recharts'
 import {
+  ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
@@ -34,14 +35,12 @@ export default function AnalyticsContainer() {
   }
 
   const areaChartConfig = {
-    // color: '#3366FF', // Remove this line
     theme: {
       light: '#FFFFFF',
       dark: '#000000',
     },
   }
   const lineChartConfig = {
-    color: '#3366FF',
     theme: {
       light: '#F0F0F0',
       dark: '#1A1A1A',
@@ -204,7 +203,10 @@ export default function AnalyticsContainer() {
           <span className="font-inter text-sm font-semibold">
             Grafik chart perjam
           </span>
-          <ChartContainer className="max-w-4xl" config={areaChartConfig}>
+          <ChartContainer
+            className="max-w-4xl"
+            config={areaChartConfig as ChartConfig}
+          >
             <AreaChart data={hourlyData} margin={{ left: 12, right: 12 }}>
               <defs>
                 <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
@@ -238,7 +240,10 @@ export default function AnalyticsContainer() {
           <span className="font-inter text-sm font-semibold">
             Trend Interaksi Pesan
           </span>
-          <ChartContainer className="max-w-4xl" config={lineChartConfig}>
+          <ChartContainer
+            className="max-w-4xl"
+            config={lineChartConfig as ChartConfig}
+          >
             <LineChart data={monthlyData} margin={{ left: 12, right: 12 }}>
               <CartesianGrid vertical={false} strokeDasharray="3 3" />
               <XAxis
