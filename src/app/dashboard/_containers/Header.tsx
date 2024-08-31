@@ -4,6 +4,7 @@ import { FaRegCalendar } from 'react-icons/fa'
 import { IoMdSettings } from 'react-icons/io'
 import { IoIosNotifications } from 'react-icons/io'
 import { FaUser } from 'react-icons/fa6'
+import { signOut } from 'next-auth/react'
 
 export default function Header({ session }: { session: Session }) {
   const today = new Date().toLocaleDateString('id-ID', {
@@ -31,7 +32,7 @@ export default function Header({ session }: { session: Session }) {
             </div>
           </div>
           <div className="cursor-pointer rounded-full bg-white p-2.5">
-            <IoMdSettings className="size-5" />
+            <IoMdSettings onClick={() => signOut()} className="size-5" />
           </div>
         </div>
         <div className="flex items-center justify-end gap-x-3">

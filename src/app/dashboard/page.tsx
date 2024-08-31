@@ -5,8 +5,6 @@ import { useDashboardAuth } from './_hooks/useDashboardAuth'
 import Header from './_containers/Header'
 import PlanContainer from './_containers/PlanContainer'
 import MessageContainer from './_containers/MessageContainer'
-import { FaAngleDown } from 'react-icons/fa6'
-import { Pie, PieChart } from 'recharts'
 import AnalyticsContainer from './_containers/AnalyticsContainer'
 
 export default function DashboardPage() {
