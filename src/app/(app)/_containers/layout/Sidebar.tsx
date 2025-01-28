@@ -6,6 +6,7 @@ import { Link as ScrollLink } from 'react-scroll'
 
 export default function Sidebar() {
   const [isBlueSection, setIsBlueSection] = React.useState<boolean>(false)
+  const ScrollLinkWrapper = ScrollLink as unknown as React.ComponentType<any>
 
   return (
     <nav className="fixed left-14 top-[35vh] z-50 hidden drop-shadow-[0_21px_50px_rgba(0,0,0,0.08)] xl:flex">
@@ -18,11 +19,11 @@ export default function Sidebar() {
         />
         <div
           className={clsxm(
-            'font-inter flex h-fit flex-col gap-y-2.5 text-sm font-medium',
+            'flex h-fit flex-col gap-y-2.5 font-inter text-sm font-medium',
             isBlueSection ? 'text-white/40' : 'text-black/40'
           )}
         >
-          <ScrollLink
+          <ScrollLinkWrapper
             to="get-started"
             spy={true}
             smooth={true}
@@ -31,8 +32,8 @@ export default function Sidebar() {
             className="cursor-pointer"
           >
             Get Started
-          </ScrollLink>
-          <ScrollLink
+          </ScrollLinkWrapper>
+          <ScrollLinkWrapper
             to="broadcast"
             spy={true}
             smooth={true}
@@ -41,8 +42,8 @@ export default function Sidebar() {
             className="cursor-pointer"
           >
             Broadcast
-          </ScrollLink>
-          <ScrollLink
+          </ScrollLinkWrapper>
+          <ScrollLinkWrapper
             to="campaign"
             spy={true}
             smooth={true}
@@ -51,8 +52,8 @@ export default function Sidebar() {
             className="cursor-pointer"
           >
             Campaign
-          </ScrollLink>
-          <ScrollLink
+          </ScrollLinkWrapper>
+          <ScrollLinkWrapper
             to="auto-reply"
             spy={true}
             smooth={true}
@@ -61,8 +62,8 @@ export default function Sidebar() {
             className="cursor-pointer"
           >
             Auto Reply
-          </ScrollLink>
-          <ScrollLink
+          </ScrollLinkWrapper>
+          <ScrollLinkWrapper
             to="opportunity"
             spy={true}
             smooth={true}
@@ -71,8 +72,8 @@ export default function Sidebar() {
             className="cursor-pointer"
           >
             Opportunity
-          </ScrollLink>
-          <ScrollLink
+          </ScrollLinkWrapper>
+          <ScrollLinkWrapper
             to="pricing"
             spy={true}
             smooth={true}
@@ -81,8 +82,8 @@ export default function Sidebar() {
             className="cursor-pointer"
           >
             Pricing
-          </ScrollLink>
-          <ScrollLink
+          </ScrollLinkWrapper>
+          <ScrollLinkWrapper
             to="faq"
             spy={true}
             smooth={true}
@@ -93,8 +94,8 @@ export default function Sidebar() {
             onSetInactive={() => setIsBlueSection(false)}
           >
             FAQ
-          </ScrollLink>
-          <ScrollLink
+          </ScrollLinkWrapper>
+          <ScrollLinkWrapper
             to="contact-us"
             spy={true}
             smooth={true}
@@ -104,7 +105,7 @@ export default function Sidebar() {
             onSetActive={() => setIsBlueSection(true)}
           >
             Contact Us
-          </ScrollLink>
+          </ScrollLinkWrapper>
         </div>
       </div>
     </nav>

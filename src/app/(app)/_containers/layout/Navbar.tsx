@@ -11,6 +11,8 @@ import clsxm from '@/lib/clsxm'
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = React.useState(false)
+  const ScrollLinkWrapper = ScrollLink as unknown as React.ComponentType<any>
+
   return (
     <>
       <nav className="z-40 flex w-full items-center justify-between bg-white px-10 py-5 shadow-md md:hidden">
@@ -31,40 +33,40 @@ export default function Navbar() {
         <div className="flex w-full flex-col gap-y-3 p-3">
           <Link
             href={'/'}
-            className="font-inter flex cursor-pointer items-center justify-center gap-x-0.5 py-2 text-center text-sm font-medium text-black"
+            className="flex cursor-pointer items-center justify-center gap-x-0.5 py-2 text-center font-inter text-sm font-medium text-black"
           >
             Features
             <IoMdArrowDropdown className="size-5" />
           </Link>
-          <ScrollLink
+          <ScrollLinkWrapper
             to="pricing"
             smooth={true}
             duration={500}
-            className="font-inter cursor-pointer py-2.5 text-center text-sm font-medium text-black"
+            className="cursor-pointer py-2.5 text-center font-inter text-sm font-medium text-black"
           >
             Pricing
-          </ScrollLink>
+          </ScrollLinkWrapper>
           <Link
             href={'/'}
-            className="font-inter cursor-pointer py-2.5 text-center text-sm font-medium"
+            className="cursor-pointer py-2.5 text-center font-inter text-sm font-medium"
           >
             Demo
           </Link>
           <div className="flex w-full cursor-pointer items-center justify-center gap-x-2 rounded-[10px] bg-[#3366FF] py-3 text-white">
-            <span className="font-inter text-center text-sm font-medium">
+            <span className="text-center font-inter text-sm font-medium">
               Sign In
             </span>
             <IoMdArrowDropdown className="size-5" />
           </div>
           <Link
             href={'/login'}
-            className="font-inter cursor-pointer rounded-md bg-[#F3F5F8]/50 py-2.5 text-center text-sm font-medium text-black/50"
+            className="cursor-pointer rounded-md bg-[#F3F5F8]/50 py-2.5 text-center font-inter text-sm font-medium text-black/50"
           >
             Sign In as Admin
           </Link>
           <Link
             href={'/login'}
-            className="font-inter cursor-pointer py-2.5 text-center text-sm font-medium text-black/50"
+            className="cursor-pointer py-2.5 text-center font-inter text-sm font-medium text-black/50"
           >
             Sign In as Customer Service
           </Link>
@@ -75,18 +77,18 @@ export default function Navbar() {
           <Image src={Logo} alt="Logo" className="ml-2 h-fit w-[137px]" />
         </Link>
         <div className="flex gap-x-7">
-          <span className="font-inter flex cursor-pointer gap-x-0.5 text-sm font-medium text-[#3366FF]">
+          <span className="flex cursor-pointer gap-x-0.5 font-inter text-sm font-medium text-[#3366FF]">
             Features
             <IoMdArrowDropdown className="size-5" />
           </span>
-          <ScrollLink
+          <ScrollLinkWrapper
             to="pricing"
             smooth={true}
             duration={500}
-            className="font-inter cursor-pointer text-sm font-medium"
+            className="cursor-pointer font-inter text-sm font-medium"
           >
             Pricing
-          </ScrollLink>
+          </ScrollLinkWrapper>
           <Link href={'/'} className="font-inter text-sm font-medium">
             Demo
           </Link>
