@@ -94,10 +94,10 @@ export default function Navbar() {
             Blog
           </Link>
         </div>
-        <Link href={'/login'}>
+        <Link href={'/register'}>
           <button className="rounded-md bg-[#3366FF] px-9 py-2">
             <span className="font-inter text-sm font-medium text-[#FAFBFF]">
-              Sign In
+              Sign Up
             </span>
           </button>
         </Link>

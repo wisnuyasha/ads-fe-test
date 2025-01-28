@@ -1,8 +1,24 @@
+'use client'
+
 import React from 'react'
 import RegisterForm from '../_components/RegisterForm'
+import { useToast } from '@/components/ui/use-toast'
 import Link from 'next/link'
 
 export default function RegisterSection() {
+  const { toast } = useToast()
+  const toastShownRef = React.useRef(false)
+
+  React.useEffect(() => {
+    if (!toastShownRef.current) {
+      toast({
+        title: 'Klik masuk disini',
+        description: 'User telah disediakan',
+      })
+      toastShownRef.current = true
+    }
+  }, [toast])
+
   return (
     <section className="relative flex h-full min-h-screen w-full flex-col items-center justify-center bg-white px-10 md:h-fit md:min-h-fit md:w-fit md:rounded-[10px] md:py-10 md:shadow-xl lg:w-[466px]">
       <h1 className="font-lexend text-2xl font-bold text-black">
